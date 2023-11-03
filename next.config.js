@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    env: {
-        mongodb: process.env.MONGODB_URI,
-    }
-}
+const nextConfig = {}
 
 module.exports = nextConfig
