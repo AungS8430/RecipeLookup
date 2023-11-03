@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import recipesData from "../../../public/recipes.json";
 import { RecipeButtons } from "@/components/recipeButtons";
 import { Divider } from "@nextui-org/divider";
@@ -8,18 +6,18 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface Recipe {
-    directions: string[];
-    sodium: number;
-    date: string;
-    categories: string[];
-    calories: number;
-    desc: string | null;
-    protein: number;
-    fat: number;
-    rating: number;
-    title: string;
-    ingredients: string[];
-    id: number;
+    id: number,
+    directions: string[],
+    fat: number,
+    date: string,
+    categories: string[],
+    calories: number,
+    desc: string | null,
+    protein: number,
+    rating: number,
+    title: string,
+    ingredients: string[],
+    sodium: number
 }
 
 let recipes: Recipe[] = recipesData as Recipe[];
