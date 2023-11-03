@@ -31,7 +31,7 @@ export const Navbar = () => {
 				</NavbarBrand>
 			</NavbarContent>
 			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
+				className="basis-1/5 sm:basis-full"
 				justify="end"
 			>
 				<NavbarItem className="flex">

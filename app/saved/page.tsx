@@ -40,7 +40,7 @@ export default function Saved() {
 		)
 	}
     return (
-        <div className="flex flex-col container max-w-2xl mx-auto items-start justify-start p-2 gap-2">
+        <div className="flex flex-col container max-w-md mx-auto items-center justify-center p-2">
 			<h1 className="text-xl sm:text-2xl font-black">Saved Items</h1>
 			<div className="grid gap-4 items-center justify-center pb-4 px-2">
 				{
