@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import recipesData from "../../../public/recipes.json";
 import { RecipeButtons } from "@/components/recipeButtons";
 import { Divider } from "@nextui-org/divider";
@@ -11,7 +13,7 @@ interface Recipe {
     date: string;
     categories: string[];
     calories: number;
-    desc: string;
+    desc: string | null;
     protein: number;
     fat: number;
     rating: number;
