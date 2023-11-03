@@ -6,7 +6,7 @@ import { Button, ButtonGroup } from "@nextui-org/button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export function getStaticParams() {
+export function generateStaticParams() {
     let params = [];
     if (Array.isArray(recipes)) {
         for (let i = 0; i < recipes.length; i++) {
@@ -17,7 +17,7 @@ export function getStaticParams() {
             })
         }
     }
-    return { params };
+    return params;
 }
 
 export default function Recipe({ params }: { params: { id: string } }) {
