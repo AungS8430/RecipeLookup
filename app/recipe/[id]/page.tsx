@@ -1,26 +1,9 @@
-import recipesData from "../../../public/recipes.json";
+import recipes from "../../../public/recipes.json";
 import { RecipeButtons } from "@/components/recipeButtons";
 import { Divider } from "@nextui-org/divider";
 import { Button, ButtonGroup } from "@nextui-org/button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
-interface Recipe {
-    sodium: number;
-    date: string;
-    categories: string[];
-    calories: number;
-    desc: string;
-    protein: number;
-    fat: number;
-    rating: number;
-    title: string;
-    ingredients: string[];
-    id: number;
-    directions: string[];
-}
-
-let recipes: Recipe[] = recipesData as Recipe[];
 
 export function generateStaticParams() {
     let params = [];
@@ -28,7 +11,7 @@ export function generateStaticParams() {
         for (let i = 0; i < recipes.length; i++) {
             params.push({
                 params: {
-                    id: recipes[i].id.toString()
+                    id: (i + 1).toString()
                 }
             })
         }
@@ -41,14 +24,6 @@ export default function Recipe({ params }: { params: { id: string } }) {
     let recipe;
     if (Array.isArray(recipes)) {
         recipe = recipes.filter((item) => item.id.toString() === id)[0];
-    }
-    if (recipe === undefined) {
-        return (
-            <div className="max-w-sm mx-auto items-start text-center flex flex-col gap-2 pt-5">
-                <h1 className="text-xl sm:text-2xl font-black">Recipe not found</h1>
-                <p className="text-sm sm:text-md text-default-500">The recipe you are looking for does not exist.</p>
-            </div>
-        )
     }
     return (
         <div className="flex flex-col container max-w-2xl mx-auto items-center justify-center p-2">
