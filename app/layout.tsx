@@ -25,7 +25,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en" className="bg-neutral-900">
 			<head />
 			<body
 				className={clsx(
