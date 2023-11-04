@@ -29,13 +29,13 @@ export default function RootLayout({
 			<head />
 			<body
 				className={clsx(
-					"min-h-screen bg-neutral-900 font-sans antialiased"
+					"bg-neutral-900 font-sans antialiased"
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col h-screen">
+					<div className="relative flex flex-col bg-neutral-900 w-screen">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-0 px-6 flex-grow">
+						<main className="container mx-auto max-w-7xl pt-0 px-6 flex-grow bg-neutral-900">
 							{children}
 						</main>
 					</div>
